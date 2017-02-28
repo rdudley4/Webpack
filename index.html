@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ECMAScript 2015 Practice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" 
+      type="image/png" 
+      href="build/img/favicon.png">
+  <link href="./style.css" rel="stylesheet"></head>
+  <body id="page">
+    <!-- Navigation -->
+    <header>
+      <nav>
+        <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="512" height="512" fill="#FFF">
+          <path d="M23.43 17H47c.552 0 1-.447 1-1s-.448-1-1-1H23.43c-.553 0-1 .447-1 1s.447 1 1 1z"/>
+          <path d="M23.43 32H47c.552 0 1-.447 1-1s-.448-1-1-1H23.43c-.553 0-1 .447-1 1s.447 1 1 1z"/>
+          <path d="M23.43 47H47c.552 0 1-.447 1-1s-.448-1-1-1H23.43c-.553 0-1 .447-1 1s.447 1 1 1z"/>
+          <path d="M59 0H1C.448 0 0 .447 0 1v58c0 .553.448 1 1 1h58c.552 0 1-.447 1-1V1c0-.553-.448-1-1-1zm-1 58H2V2h56v56z"/>
+          <path d="M12.5 18.474l2.43-1.277 2.427 1.277-.463-2.704 1.964-1.916-2.715-.394L14.93 11l-1.215 2.46-2.715.394 1.965 1.916"/>
+          <path d="M12.5 33.557l2.43-1.277 2.427 1.277-.463-2.704 1.964-1.915-2.715-.395-1.214-2.46-1.215 2.46-2.715.395 1.965 1.915"/>
+          <path d="M12.5 49l2.43-1.277L17.356 49l-.463-2.704 1.964-1.915-2.715-.394-1.214-2.46-1.215 2.46L11 44.38l1.965 1.916"/>
+        </svg>
+        <a href="#">Home</a>
+        <a href="#">Classrom</a>
+        <a href="#">Submit</a>
+      </nav>
+    </header>
+    <!-- Student List Container -->
+    <div id="students">
+      <h1 id="students__title">ECMA 2015 Student List</h1>
+      <!-- Student List -->
+      <ul id="students__list">
+        <li class="student">
+          <span class="student__id">1</span>
+          <span class="student__name">Test Name</span>
+          <button class="student__delete" type="button">Delete</button>
+          <span class="student__joined">Jan 1st, 2017</span>
+        </li>
+        <li class="student">
+          <span class="student__id">1</span>
+          <span class="student__name">Test Name</span>
+          <span class="student__joined">Jan 1st, 2017</span>
+        </li>
+        <li class="student">
+          <span class="student__id">1</span>
+          <span class="student__name">Test Name</span>
+          <span class="student__joined">Jan 1st, 2017</span>
+        </li>
+        <li class="student">
+          <span class="student__id">1</span>
+          <span class="student__name">Test Name</span>
+          <span class="student__joined">Jan 1st, 2017</span>
+        </li>
+        <li class="student">
+          <span class="student__id">1</span>
+          <span class="student__name">Test Name</span>
+          <span class="student__joined">Jan 1st, 2017</span>
+        </li>
+      </ul>
+      <!-- End Student List -->
+      <!-- Add New Student -->
+      <div id="form_container">
+        <!-- Student Cap -->
+        <svg id="grad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502.164 502.164">
+          <path d="M395.078 232.257h-288c-4.422 0-8 3.582-8 8v57.262c0 48.636 66.766 86.737 152 86.737s152-38.102 152-86.738v-57.263c0-4.418-3.578-8-8-8z" fill="#5D647F"/>
+          <path d="M251.328 232.257h-144.25c-4.422 0-8 3.582-8 8v57.262c0 48.636 66.766 86.737 152 86.737.084 0 .166-.007.25-.007V232.257z" fill="#5C546A"/>
+          <path d="M482.773 146.85L279.406 59.687c-18-7.71-38.672-7.707-56.687.02L19.4 146.843C7.43 151.973 0 163.245 0 176.26c0 13.013 7.43 24.274 19.39 29.4l203.36 87.163c8.992 3.852 18.648 5.777 28.312 5.777 9.68 0 19.36-1.93 28.375-5.797l203.32-87.137c11.97-5.125 19.406-16.398 19.406-29.414 0-13.01-7.43-24.276-19.39-29.4z" fill="#527992"/>
+          <path d="M51.078 344.257c-4.422 0-8-3.582-8-8v-121.27c0-7.805 5.578-14.434 13.266-15.766l161.367-28.065c4.353-.75 8.493 2.16 9.25 6.512.76 4.352-2.155 8.496-6.515 9.254L59.078 214.988v121.27c0 4.418-3.578 8-8 8z" fill="#5C546A"/>
+          <circle cx="51.078" cy="344.257" r="16" fill="#FF9600"/>
+          <path d="M219.078 168.257v16c0 8.836 14.327 16 32 16s32-7.164 32-16v-16h-64z" fill="#FF9600"/>
+          <ellipse cx="251.078" cy="168.257" rx="32" ry="16" fill="#FFD200"/>
+          <path d="M34.64 376.19l-5.76 63.342c-.425 4.685 3.264 8.724 7.968 8.724h30.48c4.703 0 8.392-4.04 7.966-8.724l-5.758-63.342c-.82-9.024-8.387-15.934-17.448-15.934-9.062 0-16.628 6.91-17.45 15.934z" fill="#FFD200"/>
+        </svg>
+        <h2 id="students__add_title">Add New Student</h2>
+        <form id="students__add">
+          <p>
+            <label for="fname_input">First</label>
+            <input id="fname_input" type="text" name="fname" placeholder="Bobby">
+          </p>
+          <p>
+            <label for="lname_input">Last</label>
+            <input id="lname_input" type="text" name="lname" placeholder="Mcbobberson">
+          </p>
+          <p>
+            <label for="bday_input">Birthday</label>
+            <input id="bday_input" type="date" name="bday">
+          </p>  
+        </form>
+        <button id="submit" type="button">Submit</button>
+      </div>
+    </div>  
+    <!-- End Student List Container -->
+    <!-- Scripts -->
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>
