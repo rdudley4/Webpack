@@ -1,0 +1,24 @@
+# Ignore Cache Files
+.sass-cache
+.sass-cache/*
+
+# Ignore VSCode Debugging Plugin Stuff
+.vscode/
+
+# Ignore JSHint Config
+.jshintrc
+
+#Ignore Node Modules 
+node_modules/
+
+#Ignore Package
+package.json
+
+#Ignore babelrc
+.babelrc
+
+# Ignore Webpack config
+webpack.config.js
+
+# Ignore SRC folder
+src/
