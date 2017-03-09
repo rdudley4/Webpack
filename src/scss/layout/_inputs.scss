@@ -1,0 +1,64 @@
+// -------------
+// Input Styles
+// -------------
+
+// Form Container - New Student
+// ----------------------------
+
+#form_container {
+  padding : rem(18px) rem(32px);
+  overflow: hidden;
+}
+
+#students__add {
+  &_title {
+    margin-top    : 0;
+    padding       : rem(5px) 0;
+    text-align    : center;
+    font-size     : rem(20px);
+    font-weight   : 300;
+    text-transform: uppercase;
+    color         : map($colors, font, dark); 
+  }
+
+  & p {
+    display: flex;
+  }
+}
+
+
+// Inputs & Labels
+// ---------------
+
+label {
+  width           : 25%;
+  padding-top     : rem(18px);
+  text-align      : center;
+  color           : map($colors, primary);
+  background-color: map($colors, tertiary);
+}
+
+input {
+  flex-grow  : 1;
+  padding    : rem(18px) rem(32px) rem(18px) rem(18px);
+  font-family: $stack-roboto;
+  color      : map($colors, font, dark);
+  border     : 1px solid map($colors, border);
+  border-left: 0;
+  transition : border-color .3s;
+}
+
+input:focus{
+  outline     : none;
+  border-color: map($colors, tertiary);
+}
+
+
+// Submit button
+// -------------
+
+#submit {
+  width           : 100%;
+  padding         : rem(15px);
+  margin-top      : rem(20px);
+}

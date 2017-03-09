@@ -1,0 +1,29 @@
+// ------------------
+// Project Functions
+// ------------------
+
+
+// Because map-get syntax is meh
+@function map($map, $property, $subProperty: null) {
+  @if($subProperty != null) {
+    @return map-get(map-get($map, $property), $subProperty);
+  } @else {
+    @return map-get($map, $property);
+  }
+}
+
+// Convert px to rem
+@function rem($value, $default: map($text, small)) {
+  @return ($value / $default) * 1rem;
+}
+
+// Box shadows
+@function shadow($type, $opacity: null) {
+  @if($type == 'bottom') {
+    @return 0 0 2px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+  } @else if($type == 'normal') {
+    @return 0 10px 20px -5px rgba(0,0,0, $opacity);
+  } @else if ($type == 'left-right' ) {
+    @return -10px 0 20px -5px rgba(0, 0, 0, $opacity), 10px 0 20px -5px rgba(0, 0, 0,$opacity);
+  }
+}

@@ -1,0 +1,57 @@
+// -----------
+// Base Styles
+// -----------
+
+// Box Sizing
+// ----------
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// SVG
+// ---
+
+svg * {
+  transform-origin: 50% 50%;
+}
+
+// Body
+// ----
+
+#page {
+  margin          : 0;
+  font-family     : $stack-roboto;
+  background-color: map($colors, secondary);
+}
+
+
+// Button
+// ------
+
+button {
+  text-transform  : uppercase;
+  font-weight     : 300;
+  color           : map($colors, font, dark);
+  background-color: transparent;
+  border          : 1px solid map($colors, tertiary);
+  transition      : background-color .3s, color .3s;
+  
+  // Hover Styles
+  // ------------
+  &:hover {
+    cursor          : pointer;
+    color           : map($colors, primary);
+    background-color: map($colors, tertiary);
+  }
+
+  // Focus Styles
+  // ------------
+  &:focus {
+    outline: none;
+  }
+}

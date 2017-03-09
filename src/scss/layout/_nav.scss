@@ -1,0 +1,28 @@
+// ------------------
+// Navigation Styles
+// ------------------
+
+nav {
+  display         : flex;
+  align-items     : center;
+  height          : 56px;
+  margin-bottom   : rem(30px);
+  background-color: map($colors, tertiary);
+  box-shadow      : shadow('bottom');
+
+  a {
+    padding        : rem(18px);
+    color          : map($colors, font, nav);
+    transition     : color .3s;
+    font-size      : map($text, small);
+    font-weight    : bold;
+    text-decoration: none;
+    text-transform : uppercase;
+
+    // Hover Styles
+    // ------------
+    &:hover {
+      color: map($colors, primary);
+    }
+  }
+}

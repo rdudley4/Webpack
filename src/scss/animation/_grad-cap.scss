@@ -1,0 +1,24 @@
+// --------------------------
+// Graduation Cap Animations
+// --------------------------
+
+#grad path,
+#grad ellipse,
+#grad circle {
+  animation: slide .5s forwards;
+  transform: translate3d(0, -502.164px, 0);
+}
+
+#grad path {
+  @for $i from 1 through 6 {
+    $delay: $i / 5;
+    &:nth-of-type(#{$i}) {
+      animation-delay: unquote("#{$delay}s");
+    }
+  }
+}
+
+#grad ellipse,
+#grad circle {
+  animation-delay: 1.2s;
+}

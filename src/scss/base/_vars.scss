@@ -1,0 +1,39 @@
+// ------------------
+// Project Variables
+// ------------------
+
+
+// Color Scheme
+// ------------
+$colors: (
+  primary  : #fff,
+  secondary: #f5f5f5,
+  tertiary : #0f9d58,
+  border   : rgba(0,0,0,0.12),
+  font: (
+    light: rgba(0,0,0,0.54),
+    dark : rgba(0,0,0,0.73),
+    nav  : rgba(255, 255, 255, .54)
+  )
+);
+
+// Typography
+// ----------
+
+$text: (
+  small : 14px,
+  medium: 24px,
+  large : 32px
+);
+
+// Google Fonts
+// ------------
+
+$google-font-url : 'https://fonts.googleapis.com/css?family=Roboto:300,400';
+$stack-sans-serif: 'Helvetica Neue', Helvetica, sans-serif;
+$stack-roboto    : 'Roboto', $stack-sans-serif;
+
+// Misc
+// ----
+
+$border-radius: 5px;

@@ -1,0 +1,28 @@
+// ----------------
+// Keyframe Styles
+// ----------------
+
+// Bounce Grow Effect
+// ------------------
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(.8);
+  }
+}
+
+
+// Slide Effect
+// ----------------
+@keyframes slide {
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

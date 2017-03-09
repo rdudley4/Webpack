@@ -19,6 +19,3 @@ package.json
 
 # Ignore Webpack config
 webpack.config.js
-
-# Ignore SRC folder
-src/

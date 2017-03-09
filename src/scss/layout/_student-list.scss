@@ -1,0 +1,102 @@
+// -------------------
+// Student List Styles
+// -------------------
+
+// List Container
+// --------------
+
+#students {
+  max-width       : 1150px;
+  margin          : auto;
+  margin-bottom   : rem(30px);
+  border          : 1px solid map($colors, border);
+  color           : map($colors, font, light);
+  background-color: map($colors, primary);
+
+  // Title
+  // -----
+  &__title {
+    border-bottom : 1px solid map($colors, border);
+    padding: rem(18px) 0;
+    margin: 0;
+    font-size     : rem(24px);
+    font-weight: 300;
+    text-align    : center;
+    text-transform: uppercase;
+    color: map($colors, font, dark);
+  }
+
+  // List
+  // ----
+  &__list {
+    padding-left: 0;
+    margin      : 0;
+    list-style  : none;   
+  }
+}
+
+
+// Extendable Student Styles
+// -------------------------
+
+%transition-colors {
+  transition: background-color .3s, color .4s;
+}
+
+// Student (List Item)
+// -------------------
+
+.student {
+  @extend %transition-colors;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  padding        : rem(18px) rem(32px);
+  border-bottom  : 1px solid map($colors, border);
+
+  &:hover {
+    background-color: map($colors, secondary);
+
+    .student__id {
+      background-color: map($colors, tertiary);
+      color           : map($colors, primary);
+    }
+
+    .student__delete {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  // Student ID
+  // --------------
+  &__id {
+    @extend %transition-colors;
+    padding         : rem(5px) rem(15px);
+    margin-right    : rem(10px);
+    background-color: map($colors, secondary);
+    color           : map($colors, font, light);
+    border-radius   : $border-radius;
+  }
+
+  // Student Name
+  // ------------
+  &__name {
+    text-transform: uppercase;
+    margin-right  : auto;
+  }
+
+  // Delete Button
+  // -------------
+  &__delete {
+    display     : none;
+    padding     : rem(5.5px);
+    margin-right: rem(16px);
+  }
+
+  // Student Joined
+  // --------------
+  &__joined {
+    // margin-left: auto;
+  }
+}
